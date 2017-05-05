@@ -40,7 +40,7 @@ methods =
 
   current_rule: ->
     str:  @data("initial-value-str")
-    hash: $.parseJSON(@data("initial-value-hash"))
+    hash: JSON.parse(@data("initial-value-hash") || '{}')
 
   cancel: ->
     @val @data("initial-value-hash")
